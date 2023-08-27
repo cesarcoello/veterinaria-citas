@@ -1,6 +1,11 @@
+import { format } from 'date-fns';
+import { es } from 'date-fns/locale';
+
 const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
 
   const {mascota, propietario, email, fecha, sintomas, id} = paciente;
+
+  const nuevaFecha = format(new Date(fecha), "dd 'de' MMMM 'del' yyyy", { locale: es });
 
   const handleEliminar = () => {
         const respuesta = confirm('¿Deseas eliminar este paciente?');
@@ -30,7 +35,7 @@ const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
 
             <p className='font-bold mb-3 text-gray-700 uppercase'>
             Alta: {''}
-              <span className='font-normal normal-case'>{fecha}</span>
+              <span className='font-normal normal-case'>{nuevaFecha}</span>
             </p>
 
             <p className='font-bold mb-3 text-gray-700 uppercase'>

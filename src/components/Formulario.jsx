@@ -1,15 +1,19 @@
 import {useState,useEffect} from 'react'
 import Error from './Error';
+import { format } from 'date-fns';
 
 const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
 
   const [mascota, setMascota] = useState('');
   const [propietario, setPropietario] = useState('');
   const [email, setEmail] = useState('');
+  
   const [fecha, setFecha] = useState('');
   const [sintomas, setSintomas] = useState('');
 
   const [error, setError] = useState(false);
+
+
 
   useEffect( ()=> {
       if( Object.keys(paciente).length > 0){ //comprueba si el objeto esta vacio o no
@@ -149,7 +153,8 @@ const Formulario = ({pacientes, setPacientes, paciente, setPaciente}) => {
                 type='date'
                 className='border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md'
                 value={fecha}
-                onChange={ (e) => setFecha(e.target.value)}
+                onChange={(e) => setFecha(e.target.value)}
+                
             />
         </div>
 
