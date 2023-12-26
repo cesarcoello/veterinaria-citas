@@ -9,7 +9,7 @@ Bienvenido a la aplicación de seguimiento de pacientes de veterinaria. Esta apl
 - Interfaz intuitiva: Diseño moderno y agradable construido con Tailwind CSS para una experiencia visual atractiva.
 
 ## Demo 
-https://veterinaria-citas-yulyusqaysar.netlify.app/
+https://citas-veterinaria-cc.netlify.app
 
 ## Uso
 
